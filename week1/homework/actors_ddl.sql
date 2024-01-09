@@ -1,12 +1,13 @@
 -- DDL to creaate actors table 
- CREATE TABLE ivanecky.actors (
+ CREATE TABLE 
+   ivanecky.actors (
     actor VARCHAR,
     actor_id INTEGER, 
     films ARRAY(
       ROW(
          film VARCHAR, 
          votes INTEGER,
-         rating FLOAT, 
+         rating DOUBLE, 
          film_id VARCHAR
        )
     ),
@@ -16,6 +17,8 @@
  )
 
  WITH (
-    format='parquet',
-    partitioning=ARRAY['current_year']
+    FORMAT = 'PARQUET',
+    partitioning = ARRAY['current_year']
  )
+
+
