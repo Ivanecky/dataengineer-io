@@ -2,13 +2,14 @@
  CREATE TABLE 
    ivanecky.actors (
     actor VARCHAR,
-    actor_id INTEGER, 
+    actor_id VARCHAR, 
     films ARRAY(
       ROW(
          film VARCHAR, 
          votes INTEGER,
          rating DOUBLE, 
-         film_id VARCHAR
+         film_id VARCHAR,
+         year INTEGER
        )
     ),
     quality_class VARCHAR,
